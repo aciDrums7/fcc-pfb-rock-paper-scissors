@@ -17,7 +17,7 @@ response = greeting()
 print(response)
 
 choices = get_choices()
-print(choices)
+# print(choices)
 
 # 1 dictionary
 dict = {"name": "beau", "color": "blue"}
@@ -28,11 +28,26 @@ dinner = random.choice(food)
 
 
 def check_win(player, computer):
+    # print('You chose ' + player + ', computer chose: ' + computer)
+    #? f-string
+    print(f"You chose: {player}, computer chose: {computer}")
     if player == computer:
         return "It's a tie!"
+    elif player == "rock":
+        if computer == "scissors":
+            return "Rock smashes scissors! You win!"
+        else:
+            return "Paper covers rock! You lose."
+    elif player == "paper":
+        if computer == "rock":
+            return "Paper covers rock! You win!"
+        else:
+            return "Scissors cuts paper! You lose."
+    elif player == "scissors":
+        if computer == "paper":
+            return "Scissors cuts paper! You win!"
+        else:
+            return "Rock smashes scissors! You lose."
 
-
-a = 3
-b = 5
-if a == b:
-    print("Yes!!!")
+isWin = check_win(choices['player'], choices['computer'])
+print(isWin)
