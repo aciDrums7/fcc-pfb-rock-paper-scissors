@@ -1,3 +1,5 @@
+""" Main """
+
 import random
 
 
@@ -29,7 +31,7 @@ dinner = random.choice(food)
 
 def check_win(player, computer):
     # print('You chose ' + player + ', computer chose: ' + computer)
-    #? f-string
+    # ? f-string
     print(f"You chose: {player}, computer chose: {computer}")
     if player == computer:
         return "It's a tie!"
@@ -49,5 +51,6 @@ def check_win(player, computer):
         else:
             return "Rock smashes scissors! You lose."
 
-isWin = check_win(choices['player'], choices['computer'])
+
+isWin = check_win(choices["player"], choices["computer"])
 print(isWin)
